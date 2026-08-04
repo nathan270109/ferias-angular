@@ -1,0 +1,38 @@
+<div class="fundo">
+    <h1>ATIVIDADE</h1>
+    <!-- <div>
+        <div>
+            <span (click)="redefinirValor()">{{contador()}}</span>
+            <button (click)="incrementarValor()">Incrementar</button>
+        </div>
+    </div> -->
+
+    <!--////////////////////////////////////////////////-->
+
+    <div>
+        <p>Você está
+            @if(logado()) {
+            logado
+            } @else {
+            deslogado
+            }
+        </p>
+
+        <button (click)="alterarEstado()">
+            @if (logado()) {
+                Deslogar
+            } @else {
+                Logar
+            }
+        </button>
+
+    </div>
+
+    <!--////////////////////////////////////////////////-->
+
+    <!-- <div>
+        <input [(ngModel)]="urlImage" type="text">
+        <img [src]="urlImage()" alt="">
+    </div> -->
+
+</div>

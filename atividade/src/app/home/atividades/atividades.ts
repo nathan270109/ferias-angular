@@ -1,42 +1,19 @@
-import { Component, signal } from '@angular/core';
+import { Component} from '@angular/core';
+import { Cadastro } from './cadastro/cadastro';
+import { Contador } from './contador/contador';
+import { ImagemIlustrativa } from './imagem-ilustrativa/imagem-ilustrativa';
+import { ArrayUsuarios } from './array-usuarios/array-usuarios';
+import { Formulario } from './formulario/formulario';
+
 
 @Component({
   selector: 'app-atividades',
-  imports: [],
+  imports: [Cadastro, Contador, ImagemIlustrativa, ArrayUsuarios, Formulario],
   templateUrl: './atividades.html',
   styleUrl: './atividades.css',
 })
 export class Atividades {
 
-// protected contador = signal<number>(0)
-
-// private limiteImposto = 999;
-
-// protected incrementarValor() {
-//   this.contador.update(valor => valor + 1)
-//   this.checarValor();
-// }
-
-// private checarValor() {
-//   if (this.contador() > this.limiteImposto) {
-//     this.contador.set(0)
-//   }
-// }
-
-// protected redefinirValor() {
-//   this.contador.set(0)
-// }
-
-///////////////////////////////////////////////////
-
-protected logado = signal<boolean>(false);
-
-protected alterarEstado() {
-  this.logado.update(estado => !estado);
-}
-
-/////////////////////////////////////////////
-
-// protected urlImage = signal<string>("")
+  
 
 }

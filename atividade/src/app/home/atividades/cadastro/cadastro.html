@@ -1,0 +1,19 @@
+<div>
+    <h2>Cadastro</h2>
+        <p>Você está
+            @if(logado()) {
+            logado
+            } @else {
+            deslogado
+            }
+        </p>
+
+        <button (click)="alterarEstado()">
+            @if (logado()) {
+                Deslogar
+            } @else {
+                Logar
+            }
+        </button>
+
+    </div>

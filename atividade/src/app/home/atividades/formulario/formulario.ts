@@ -18,11 +18,19 @@ export class Formulario {
 
   protected produtoForm = form(this.produtoModel);
 
+  protected produtos = signal<Produto[]>([]);
+
+
+
   protected cadastrarProduto(event: SubmitEvent) {
     
     event.preventDefault();
 
     const produto = this.produtoModel();
+
+    console.log('produto cadastrado')
+
+    this.produtos.update(valor => [...valor,produto])
 
     this.produtoModel.set({
       titulo: '',
@@ -30,6 +38,8 @@ export class Formulario {
       preco: null
     })
   }
+
+  
 
 }
 

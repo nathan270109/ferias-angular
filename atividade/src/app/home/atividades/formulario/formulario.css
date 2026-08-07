@@ -1,5 +1,124 @@
-form {
+/* Container principal da página de produtos */
+form, .produtos {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px solid #eef2f6;
+  }
+  
+  /* Título do Formulário */
+  form h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #1e293b;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  /* Campos de entrada (Inputs) */
+  form input[type="text"] {
+    width: 100%;
+    padding: 11px 14px;
+    margin-bottom: 14px;
+    font-size: 0.95rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  form input[type="text"]:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+  }
+  
+  /* Botões do formulário */
+  form button {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+  
+  form button:active {
+    transform: scale(0.98);
+  }
+  
+  /* Botão Cadastrar (Primário) */
+  form button:first-of-type {
+    background-color: #2563eb;
+    color: #ffffff;
+  }
+  
+  form button:first-of-type:hover {
+    background-color: #1d4ed8;
+  }
+  
+  /* Botão Excluir (Secundário/Perigo) */
+  form button:last-of-type {
+    background-color: #ef4444;
+    color: #ffffff;
+  }
+  
+  form button:last-of-type:hover {
+    background-color: #dc2626;
+  }
+  
+  /* Lista de produtos */
+  .produtos {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-}
+    gap: 12px;
+  }
+  
+  /* Card individual do produto dentro da lista */
+  .produtos > div {
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    background-color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  /* Título do produto */
+  .produtos > div p:nth-child(1) {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1e293b;
+  }
+  
+  /* Descrição do produto */
+  .produtos > div p:nth-child(2) {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #64748b;
+  }
+  
+  /* Preço do produto */
+  .produtos > div p:nth-child(3) {
+    margin: 4px 0 0 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #16a34a;
+  }
+  
+  /* Mensagem quando a lista estiver vazia (@empty) */
+  .produtos > p {
+    margin: 0;
+    text-align: center;
+    color: #94a3b8;
+    font-style: italic;
+  }

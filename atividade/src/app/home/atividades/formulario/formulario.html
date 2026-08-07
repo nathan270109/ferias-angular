@@ -12,6 +12,20 @@
     <input type="text" inputmode="numeric" placeholder="Preço" [formField]="produtoForm.preco">
 
     <button>Cadastrar produto</button>
-    <button>Excluir</button>
 
 </form> 
+
+
+<div class="produtos">
+
+    @for (produto of produtos(); track produto.titulo) {
+        <div>
+            <p>{{produto.titulo}}</p>
+            <p>{{produto.descricao}}</p>
+            <p>{{produto.preco}}</p>
+        </div>
+    } @empty {
+        <p>Não há itens disponivel</p>
+    }
+
+</div>

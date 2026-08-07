@@ -1,10 +1,16 @@
-<h2>Usuários</h2>
+<div class="usuarios-container">
 
-@for (usuario of usuarios(); track usuario.id) {
-     
-    <div class="usuario-card">
-        <p>{{usuario.id}}</p>
-        <p>{{usuario.nome}}</p>
-        <p>{{usuario.idade}}</p>  
+    <h2>Usuários</h2>
+    <div class="usuarios-grid">
+        @for (usuario of usuarios(); track usuario.id) {
+
+        <div class="usuario-card">
+            <p>{{usuario.id}}</p>
+            <p>{{usuario.nome}}</p>
+            <p>{{usuario.idade}}</p>
+        </div>
+
+        }
     </div>
-}
+
+</div>

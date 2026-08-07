@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Atividades } from './atividades/atividades';
 
+
 @Component({
   selector: 'app-home',
   imports: [Atividades],

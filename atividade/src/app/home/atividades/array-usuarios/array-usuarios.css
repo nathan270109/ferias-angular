@@ -1,4 +1,71 @@
-.usuario-card {
+/* Container geral da lista de usuários */
+.usuarios-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Título */
+  .usuarios-container h2 {
+    color: #1e293b;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Grid para organizar os cards dos usuários */
+  .usuarios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  
+  /* Card individual do usuário */
+  .usuario-card {
+    background-color: #ffffff;
+    padding: 16px 20px;
+    border-radius: 12px;
+    border: 1px solid #eef2f6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     display: flex;
-    gap: 20px;
-}
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  /* Efeito ao passar o mouse sobre o card */
+  .usuario-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilo para os parágrafos dentro do card */
+  .usuario-card p {
+    margin: 0;
+    color: #334155;
+    font-size: 0.95rem;
+  }
+  
+  /* ID do usuário (menor e discreto) */
+  .usuario-card p:nth-child(1) {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Nome do usuário (em destaque) */
+  .usuario-card p:nth-child(2) {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1e293b;
+  }
+  
+  /* Idade do usuário */
+  .usuario-card p:nth-child(3) {
+    color: #64748b;
+    font-size: 0.9rem;
+  }

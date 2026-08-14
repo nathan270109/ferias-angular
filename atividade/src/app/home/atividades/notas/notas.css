@@ -1,0 +1,133 @@
+/* Container do Formulário */
+form {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Campos de Texto (Input) */
+form input[type="text"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  color: #333333;
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Efeito de Foco nos Inputs */
+form input[type="text"]:focus {
+  background-color: #ffffff;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+/* Estilização do Placeholder */
+form input[type="text"]::placeholder {
+  color: #9ca3af;
+}
+
+/* Botão de Envio */
+form button {
+  width: 100%;
+  padding: 0.85rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #4f46e5;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  margin-top: 0.5rem;
+}
+
+/* Interações do Botão */
+form button:hover {
+  background-color: #4338ca;
+}
+
+form button:active {
+  transform: scale(0.98);
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 0.5rem 0;
+  text-align: center;
+}
+
+/* Container em Grid para os Cards */
+.alunos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Card Individual do Aluno */
+.aluno-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.aluno-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Informações do Aluno */
+.aluno-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.15rem;
+  color: #111827;
+}
+
+.aluno-info p {
+  margin: 0 0 1rem 0;
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+/* Badges de Status (Aprovado / Reprovado) */
+.status {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.status.aprovado {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status.reprovado {
+  background-color: #fee2e2;
+  color: #991b1b;
+}

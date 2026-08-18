@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { Produto } from './produto';
 import { form, FormField } from '@angular/forms/signals';
 
@@ -9,6 +9,8 @@ import { form, FormField } from '@angular/forms/signals';
   styleUrl: './formulario.css',
 })
 export class Formulario {
+
+
 
   protected produtoModel = signal<Produto>({
     titulo: '',

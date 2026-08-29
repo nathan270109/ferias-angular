@@ -1,0 +1,7 @@
+@for (usuario of arrayUsuariosService.usuarios(); track usuario.id) {
+    <div class="usuario-card">
+        <h1>{{usuario.id}}</h1>
+        <p>{{usuario.nome}}</p>
+        <p>{{usuario.idade}}</p>
+    </div>
+}

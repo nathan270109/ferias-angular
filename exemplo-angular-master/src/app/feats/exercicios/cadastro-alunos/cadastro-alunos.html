@@ -1,0 +1,45 @@
+
+<form (submit)="cadastrarAluno($event)">
+
+  
+    <input type="text" 
+           placeholder="Nome do aluno" 
+           [formField]="alunoForm.nome">
+
+
+    @if (alunoForm.nome().touched() && alunoForm.nome().invalid()) {
+        @for (error of alunoForm.nome().errors(); track error.kind) {
+            <span>{{error.message}}</span>
+        }
+    }
+
+    
+    <input type="text" 
+           inputmode="numeric" 
+           placeholder="Média" 
+           [formField]="alunoForm.media">
+
+    
+    @if (alunoForm.media().touched() && alunoForm.media().invalid()) {
+        @for (error of alunoForm.media().errors(); track error.kind) {
+            <span>{{error.message}}</span>
+        }
+    }
+
+    <button [disabled]="alunoForm().invalid()">Cadastrar aluno</button>
+</form>
+
+
+@for (aluno of servicoCerto.alunos(); track aluno.nome) {
+    <p>Nome: {{aluno.nome}}</p>
+    <p>Media: {{aluno.media}}</p>
+
+   
+    @if (aluno.media !== null) {
+        @if (aluno.media >= 7) {
+            <p style="color: green;">Aprovado</p>
+        } @else {
+            <p style="color: red;">Reprovado</p>
+        }
+    }
+}

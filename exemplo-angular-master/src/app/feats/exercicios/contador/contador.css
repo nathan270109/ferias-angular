@@ -1,0 +1,7 @@
+span {
+    display: flex;
+}
+
+span:hover {
+    cursor: pointer;
+}

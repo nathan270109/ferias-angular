@@ -1,0 +1,36 @@
+/* Container da navegação */
+nav {
+  display: flex;
+  gap: 12px;
+  background-color: #1c3825;
+  padding: 12px 16px;
+  box-shadow: 0 4px 20px -1px rgba(0, 0, 0, 0.486);
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+/* Estilo padrão dos links */
+nav a {
+  color: #c0c0c0;
+  text-decoration: none;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+/* Efeito ao passar o mouse */
+nav a:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Estado ativo do Angular (routerLinkActive="pagina-ativa") */
+nav a.pagina-ativa {
+  color: #ffffff;
+  background-color: #408d39;
+  font-weight: 600;
+}
